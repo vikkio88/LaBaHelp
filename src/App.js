@@ -63,8 +63,7 @@ class App extends Component {
     elaborate() {
         this.setState({loading: true});
         axios.post(
-            //'https://vikkio.co/labahelp-api/text',
-            'http://localhost:8888/labahelp-api/text',
+            'https://vikkio.co/labahelp-api/text',
             {text: this.state.text, ua: window.navigator.userAgent}
         ).then(data => {
             this.setState({
