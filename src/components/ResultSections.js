@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
 import {ResultSet} from "./ResultSet";
-import {Button} from "semantic-ui-react";
+import {Button, Image} from "semantic-ui-react";
 
 class ResultSections extends Component {
     renderCategories(result) {
         if (result.filter(e => e.results.length === 0).length > 1) {
-            return <h1>You probably pasted bullshit instead of a CV text</h1>;
+            return (
+                <div>
+                    <h1>You probably pasted bullshit instead of a CV text</h1>
+                    <Image
+                        fluid
+                        src="https://user-images.githubusercontent.com/248805/35486874-3bffdd50-046c-11e8-9129-8ffff228de8a.gif"
+                        alt="Instructions"/>
+                </div>
+            );
         }
         return result.map(category => {
                 if (!category.results.length) {
