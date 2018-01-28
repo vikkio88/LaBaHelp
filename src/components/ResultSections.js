@@ -10,7 +10,7 @@ class ResultSections extends Component {
         return result.map(category => (
             <div key={category.name} className="category-wrapper">
                 <h1>{category.name}</h1>
-                <ResultSet result={category.results.sort((e, e2) => e.count > e2.count ? 1 : -1)}/>
+                <ResultSet result={category.results.sort((e, e2) => e.count < e2.count ? 1 : -1)}/>
             </div>
         ));
     }
