@@ -19,6 +19,9 @@ class ResultSet extends Component {
 
     render() {
         const {result} = this.props;
+        if (!result.length) {
+            return <diV/>;
+        }
         const max = result[0].count;
         return (
             <div>
