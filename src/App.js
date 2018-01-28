@@ -4,7 +4,7 @@ import {Button, Form, Loader, Popup, TextArea} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 
-import {ResultSet} from './components';
+import {ResultSections} from './components';
 
 class App extends Component {
     state = {
@@ -47,9 +47,7 @@ class App extends Component {
                                 </Form>
                             </div>
                         )}
-                        {!loading && result && (
-                            <ResultSet result={result}/>
-                        )}
+                        {!loading && <ResultSections result={result}/>}
                     </div>
                 </div>
                 <footer>
@@ -65,7 +63,8 @@ class App extends Component {
     elaborate() {
         this.setState({loading: true});
         axios.post(
-            'https://vikkio.co/labahelp-api/text',
+            //'https://vikkio.co/labahelp-api/text',
+            'http://localhost:8888/labahelp-api/text',
             {text: this.state.text, ua: window.navigator.userAgent}
         ).then(data => {
             this.setState({

@@ -3,6 +3,7 @@
     min-height: 100vh;
     flex-direction: column;
 }
+
 .App {
     text-align: center;
     flex: 1;
@@ -26,7 +27,7 @@
 }
 
 .button {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .form {
@@ -37,6 +38,29 @@ footer {
     text-align: center;
 }
 
-@keyframes blinker {
-    50% { opacity: 0.0; }
+.category-wrapper {
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-transform: capitalize;
+}
+
+.subcategory {
+    flex: 1;
+    display: flex;
+    padding: 10px;
+    border: #838383 1px solid;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.subcategory h3 {
+    flex: 1;
+}
+
+.progress-wrapper {
+    flex: 5;
+    margin-left: 10px;
 }
